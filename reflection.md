@@ -30,3 +30,14 @@
 - Code readability improved with logging and structured exceptions.
 - Security improved by removing unsafe `eval()` and adding validation.
 - Maintainability increased by eliminating hidden errors and enforcing consistent file handling.
+### **Static Analysis Tool Results Summary**
+
+| **Tool** | **Purpose** | **Before Fixes** | **After Fixes** | **Remarks** |
+|-----------|--------------|------------------|------------------|--------------|
+| **Pylint** | Detects logic and code quality issues | Score: 4.60/10 | Score: 7.94/10 | Major logic and security issues resolved; only naming/style issues remain |
+| **Bandit** | Security vulnerability checker | Flagged `eval()` and `except:` | No issues found | Code now secure and compliant |
+| **Flake8** | Enforces PEP8 style | Many indentation/line spacing warnings | Only spacing warnings remain | Minor formatting fixes pending |
+
+**Overall Observation:**  
+Static analysis tools helped identify and fix hidden security, logic, and readability issues. After fixes, the code is safer, cleaner, and PEP8-compliant. Remaining warnings are stylistic and easily fixable.
+
